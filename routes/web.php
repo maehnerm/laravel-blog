@@ -11,6 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'PostController@frontpage')->name('frontpage');
+Route::get('/articles{post}', 'PostController@show_front')->name('show-front');
+
+Auth::routes();
+
+
+
+Route::prefix('admin')->group( function(){
+	//MAIN
+	Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+	//POSTS
+	Route::get('/posts', 'PostController@index')->name('posts-index');
+	Route::get('/posts/create', 'PostController@create')->name('posts-create');
+	Route::post('/posts', 'PostController@store')->name('posts-store');
+	Route::get('/posts/{id}', 'PostController@show')->name('posts-show');
+	Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts-edit');
+	Route::patch('/posts/{id}', 'PostController@update')->name('posts-update');
+	Route::delete('/posts/{id}/delete', 'PostController@destroy')->name('posts-destroy');
+
+	Route::get('/comments', 'CommentsController@index')->name('comments');
 });
