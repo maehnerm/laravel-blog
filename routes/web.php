@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PostController@frontpage')->name('frontpage');
-Route::get('/articles{post}', 'PostController@show_front')->name('show-front');
+Route::get('/articles/{post}', 'PostController@show_front')->name('show-front');
 
 Auth::routes();
 
@@ -31,5 +31,8 @@ Route::prefix('admin')->group( function(){
 	Route::patch('/posts/{id}', 'PostController@update')->name('posts-update');
 	Route::delete('/posts/{id}/delete', 'PostController@destroy')->name('posts-destroy');
 
-	Route::get('/comments', 'CommentsController@index')->name('comments');
+	//COMMENTS
+	Route::get('/comments', 'CommentController@index')->name('comments-index');
+	Route::post('/comments/{post_id}', 'CommentController@store')->name('comments-store');
+	Route::get('/comments/{id}', 'CommentController@show')->name('comments-show');
 });

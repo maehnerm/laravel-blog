@@ -34,7 +34,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
 						@if( auth()->check() )
-						<li><a href="/admin/home">Dashboard</a></li>
+						<li><a href="{{ route('dashboard') }}">Dashboard</a></li>
 						@endif
           </ul>
         </div><!-- /.nav-collapse -->
@@ -51,21 +51,6 @@
           </p>
           @yield ('content')
         </div><!--/.col-xs-12.col-sm-9-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
 
       <hr>
@@ -80,11 +65,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-  	{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="offcanvas.js"></script> --}
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
+
   </body>
 </html>

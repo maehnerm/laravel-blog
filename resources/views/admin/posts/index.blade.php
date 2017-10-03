@@ -7,6 +7,9 @@
 		</div>
 
 		<div class="col-sm-9 col-md-10">
+			<h1>Posts</h1>
+			<a href="{{ route('posts-create') }}" class="btn btn-primary btn-sm">New Post</a>
+			<hr>
 			@if($posts)
 			<div class="table-responsive">
 				<table class="table table-striped">
@@ -33,7 +36,7 @@
 									{{ $post->created_at->toFormattedDateString() }}
 								</td>
 								<td>
-									<a class="btn btn-primary" href="{{ route('posts-edit',['id' => $post->id]) }}">edit</a>
+									<a class="btn btn-primary btn-sm" href="{{ route('posts-edit',['id' => $post->id]) }}">edit</a>
 									<!-- <div class="btn-group">
 									  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									    Action <span class="caret"></span>

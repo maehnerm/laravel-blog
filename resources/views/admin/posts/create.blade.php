@@ -32,7 +32,7 @@
 					</div>
 					<div class="form-group">
 						<div class="">
-							<button type="submit" class="btn btn-primary">Save</button>
+							<button type="submit" class="btn btn-primary btn-sm">Save</button>
 						</div>
 					</div>
 					@include ('layouts.errors')

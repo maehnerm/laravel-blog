@@ -33,8 +33,8 @@
 					</div>
 					<div class="form-group">
 						<div class="">
-							<button type="submit" class="btn btn-primary">Save</button>
-							<button type="submit" form="delete-form" class="btn btn-danger">Delete</button>
+							<button type="submit" class="btn btn-primary btn-sm">Save</button>
+							<button type="submit" form="delete-form" class="btn btn-danger btn-sm">Delete</button>
 						</div>
 					</div>
 					@include ('layouts.errors')
